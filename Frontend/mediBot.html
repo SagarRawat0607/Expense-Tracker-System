@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medai</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="bothead" id="medai" title="This web-app is made by Sahil Devli">
+      <img src="./utils/medicicon.png" alt="Medai" />
+    </div>
+
+    <ul class="chats" id="chats">
+      <!-- <li class="bzot"><div class="bot_text">Greetings! I'am Medic Bpt, I can give you medicine suggestions and precautions according to symptoms.</div></li> -->
+    </ul>
+
+    <div class="typing">
+      <div class="inputArea">
+        <input
+          type="text"
+          placeholder="Enter Symptoms like : cough,headache,so on..."
+          autocomplete="on"
+          id="input"
+        />
+        <button class="submit" id="send">
+          <img src="./utils/send.png" alt="send" />
+        </button>
+      </div>
+      <p>
+        MedicBOT • Provides medicine suggestions and precautions based on the
+        database | For serious issues, consult a doctor immediately.
+      </p>
+    </div>
+  </body>
+  <script src="./script/script.js"></script>
+</html>

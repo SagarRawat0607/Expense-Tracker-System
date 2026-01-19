@@ -1,0 +1,259 @@
+html{
+    width: 99.9vw;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    scroll-behavior: smooth;
+}
+body{
+    width: 99.9vw;
+    height: 100v;
+    background-color: rgb(206, 206, 206);
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body .bothead{
+    /* border: 1px solid; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+    font-size:large;
+    cursor: pointer;
+    font-weight: bold;
+    color: gray;
+    backdrop-filter: blur(10px); /* Blurs everything behind */
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s ease-in-out;
+
+    margin-bottom: 7px;
+}
+body .bothead img{
+    height: 2.5em;
+    filter: contrast(0.5);
+    transition: all 0.4s ease-in-out;
+}
+body .bothead:hover{
+    color: rgb(31, 31, 31);
+}
+body .bothead img:hover{
+    filter: contrast(1);
+}
+
+body ul{
+    /* border: 1px solid; */
+
+    width: 80vw;
+    height: 75vh;
+
+    margin-top: 50px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    list-style: none;
+    overflow-y: scroll;
+    scrollbar-width:none;
+}
+
+body ul .bot{
+    /* border: 1px solid; */
+    min-height: max-content;
+    font-size: medium;
+    color: rgb(27, 27, 27);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    
+}
+body ul .bot div{
+    width:fit-content;
+    max-width: 60em;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    /* background-color: rgba(152, 152, 152, 0.245); */
+    background-color: transparent;
+    border-radius: 1em;
+
+}
+
+body ul .user{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: end;
+    min-height: max-content;
+    font-size: medium;
+    color: rgb(90, 90, 90);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    cursor: default;
+    
+}
+
+body ul .user div{
+    color: rgb(229, 229, 229);
+    width:fit-content;
+    max-width: 60em;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    /* background-color: rgba(27, 114, 255, 0.966); */
+    background-color: rgba(0, 128, 0, 0.863);
+    border-radius: 1em;
+}
+
+
+
+body .typing{
+    /* border: 1px solid; */
+    position: absolute;
+    z-index: 3;
+    bottom: 5px;
+    /* width: 60vw; */
+    /* height: 15vh; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+body .typing .inputArea{
+    /* border: 1px solid red; */
+    /* background-color: rgba(121, 121, 121, 0.301); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+body .typing .inputArea input{
+    width: 40em;
+    height: 3.7em;
+
+    overflow-x: scroll;
+    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 1.5em;
+    font-size: medium;
+    color: rgb(43, 43, 43);
+    background-color: rgba(107, 107, 107, 0.301);
+    backdrop-filter: blur(10px); /* Blurs everything behind */
+    -webkit-backdrop-filter: blur(10px); 
+    border: none;
+    
+}
+body .typing .inputArea input::placeholder {
+    color: gray;
+    opacity: 0.5;
+}
+body .typing .inputArea button{
+    /* border: 1px solid gray; */
+
+    border-radius: 100%;
+    background-color: rgb(0, 0, 0);
+    /* background-color: transparent; */
+    height: 4.7em;
+    width: 4.7em;
+    border: none;
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    
+    transition: all 0.4s ease-in-out;
+}
+
+body .typing .inputArea button:hover{
+    background-color: rgb(95, 95, 95);
+    
+}
+body .typing .inputArea button img{
+    height: 3em;
+}
+
+body .typing p{
+    cursor: pointer;
+    font-size: small;
+    color: rgb(58, 58, 58);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+@media (max-width: 770px){
+    body .typing .inputArea input{
+        width: 34em;
+        height: 3.5em;
+        font-size: small;
+    }
+    body .typing .inputArea button{
+        height: 3.7em;
+        width: 3.7em;
+    }
+    body .typing .inputArea button img{
+        height: 2em;
+    }
+    body .typing p{
+        font-size:x-small;
+    }
+}
+
+@media (max-width: 430px){
+    body ul{
+        width: 97vw;
+        height: 70vh;
+    }
+    body ul .bot div{
+        max-width: 24em;
+        padding: 10px;
+        font-size: small;
+        overflow-x: scroll;
+    }
+    body ul .user div{
+        max-width: 24em;
+        padding: 10px;
+        font-size: small;
+        overflow-x: scroll;
+    }
+    body .typing .inputArea{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10px;
+    }
+
+    body .typing .inputArea input{
+        width: 70vw;
+        height: 3.5em;
+        font-size: small;
+        padding-left: 20px;
+        padding-right: 2px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border-radius: 1.5em;
+        font-size: small;
+    }
+    body .typing .inputArea button{
+        height: 3.3em;
+        width: 3.3em;
+    }
+    body .typing .inputArea button img{
+        height: 2em;
+    }
+    body .typing p{
+        font-size:xx-small;
+    }
+}

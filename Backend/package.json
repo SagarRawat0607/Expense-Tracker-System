@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chatgpt.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openrouter/sdk": "^0.3.15",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "fetch-headers": "^3.0.1",
+    "node": "^25.3.0",
+    "node-fetch": "^2.7.0",
+    "openai": "^6.16.0"
+  }
+}

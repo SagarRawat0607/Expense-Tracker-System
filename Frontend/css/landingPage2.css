@@ -1,0 +1,102 @@
+body .page2{
+    /* border: 1px solid black; */
+    height: 70vh;
+    width: 99.9vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+body .page2 .guid{
+    /* border: 1px solid; */
+    width: 40vw;
+
+    cursor: default;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    gap: 5vh;
+
+    color: rgb(91, 91, 91);
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body .page2 .guid .note{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+body .page2 .guid button{
+    width: 10em;
+    height: 3em;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    border: 1.5px solid green;
+    background-color: green;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+body .page2 .guid button:hover{
+    color: green;
+    background-color: transparent;
+}
+
+body .page2 .visual_guid{
+    /* border: 1px solid rgb(47, 0, 128); */
+    /* width: 30vw;
+    height: 30vh; */
+    height: auto;
+    width: auto;
+    
+    
+}
+body .page2 .visual_guid video{
+    /* border: 1px solid red; */
+    /* border: none; */
+    border-radius: 10px;
+    width: 30vw;
+    height: 30vh;
+}
+#imgBot{
+    /* border: 1px solid red; */
+    height: 50vh;
+}
+
+@media (max-width: 865px){
+    body .page2{
+        /* border: 1px solid black; */
+        height: 100vh;
+        flex-direction: column-reverse;
+        
+    }
+
+    body .page2 .visual_guid video{
+        border: none;
+        border-radius: 10px;
+        width: 90vw;
+        height: 40vh;
+    }
+
+    body .page2 .guid{
+        /* border: 1px solid; */
+        width: 90vw;
+    }
+}

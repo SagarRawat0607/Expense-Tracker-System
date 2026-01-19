@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./utils/medicicon.png" id="tab-logo">
+    <title>Medai</title>
+
+    <link rel="stylesheet" href="./css/stylelanding.css">
+    <link rel="stylesheet" href="./css/landingPage2.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+</head>
+<body>
+
+
+    <div class="page1" id="login">
+
+        <div class="title">
+
+            <div class="logo"><img src="./utils/medicicon.png" alt="" id="logo">
+                <div class="mssg" id="mssg">Hello 👽</div>
+            </div>
+
+            <div class="name">
+                <p class="m">M</p><p>e</p><p>d</p><p>a</p><p>i</p>
+            </div>
+        </div>
+
+        <div class="input">
+
+            <div class="login">
+                <input type="email" id="mail" placeholder="email id">
+                <input type="password" id="pass" placeholder="password">
+                <div class="forpass">forgot password</div>
+            </div>
+                
+            <div class="division">
+                <div class="line"></div>
+                or
+                <div class="line"></div>
+            </div>
+
+            <div class="quickIN">
+                <div class="google"><img src="./utils/google.png" alt=""></div>
+                <div class="apple"><img src="./utils/apple.png" alt=""></div>
+                <div class="facebook"><img src="./utils/facebook.png" alt=""></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    <div class="page2" id="about">
+        
+        <div class="guid">
+                <div class="note">
+                    <h1>How to Use the Application</h1>
+                    <p>Using Medai is simple and user-friendly.To get started, the user just needs to enter their symptoms into the provided input area on the chat interface. Once submitted, the bot will instantly respond with relevant precautions, medicine recommendations, and health tips based on the symptoms entered.
+                        <br><br>To try the application, simply click on the <strong>"Try medai"</strong> button below.</p>
+                </div>
+                <button id="try_medai_btn">Try medai</button>
+        </div>
+
+        <div class="visual_guid">
+            <video autoplay muted loop >
+                <source src="./utils/hoetouse.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    </div>
+
+    <div class="page2">
+        <div class="guid">
+            <div class="note">
+                <h1>AI-Powered Health Assistant</h1>
+                <p>Medic Bot is a web-based health assistant application designed to provide users with instant medical guidance based on their symptoms. The core functionality revolves around delivering precautionary measures, recommended over-the-counter medicines, and health tips, ensuring users receive timely and relevant support without needing immediate clinical visits.
+                    <br><br>
+                    The application uses a symptom-driven approach, where users input a list of their symptoms into a simple, intuitive chat interface. The bot processes this information and returns helpful suggestions tailored to the symptoms, enhancing user awareness and decision-making in early-stage healthcare.
+                </p>
+            </div>
+            <!-- <button id="viewrepo">visit repository</button> -->
+        </div>
+
+        <div class="visual_guid">
+            <img src="./utils/BotPlus.png" alt="" id="imgBot">
+        </div>
+
+    </div>
+    
+    <footer>
+        
+        <div class="foot1">
+            <img src="./utils/Myprofile.png" alt="">
+            <p>
+                Thanks for trying out Medai, a demo app by Sahil Devli.
+                <br>Feel free to share any bugs or feedback — it’s much appreciated!
+            </p>
+        </div>
+
+
+        <div class="quicklinks">
+            <table >
+
+                <tr>
+                    <th>Quick Access</th>
+                    <th>Devloper</th>
+                </tr>
+
+                <tr>
+                    <td><a href="#login">home</a></td>
+                    <td><a href="../../index.html" target="_blank">Profile</a></td>
+                </tr>
+
+                <tr>
+                    <td><a href="./mediBot.html" target="_blank">medai</a></td>
+                    <td><a href="https://www.linkedin.com/in/sahil-devli-82368b254/" target="_blank">Linked in</a></td>
+                </tr>
+                
+                <tr>
+                    <td id="feedback"> feedback</td>
+                    <td><a href="https://github.com/SahilDevli?tab=repositories" target="_blank">Git-hub</a></td>
+                </tr>
+
+            </table>
+        </div>
+
+    </footer>
+
+    </body>
+
+<script>
+    let mssg = document.getElementById("mssg");
+    let logo = document.getElementById("logo");
+
+    logo.addEventListener("click", () => {
+        mssg.style.bottom = "140px";
+        mssg.style.left = "100px";
+        mssg.style.visibility = "visible";
+
+        setTimeout(() => {
+            mssg.style.visibility = "hidden";
+        }, 1000);
+        setTimeout(() => {
+            mssg.style.bottom = "120px";
+            mssg.style.left = "80px";
+        }, 2000);
+        
+    });
+
+    let passField = document.getElementById("pass");
+    let occ = 0;
+
+    passField.addEventListener('click', () => {
+        if (occ === 0) {
+            alert("Press Ctrl+S (or Cmd+S on Mac) to show/hide the password.");
+            occ++;
+        }
+    });
+
+
+        
+    document.addEventListener("keydown", function(event) {
+        // Check for Ctrl+S or Cmd+S
+        if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 's') {
+            event.preventDefault(); // Prevent browser's Save dialog
+            passField.type = (passField.type === "password") ? "text" : "password";
+        }
+    });
+
+    let feedback = document.getElementById("feedback");
+    feedback.addEventListener('click',()=>{
+        prompt("feedback");
+    });
+
+    let tryapp = document.getElementById("try_medai_btn");
+
+    tryapp.addEventListener('click', () => {
+        window.open('mediBot.html','_self');
+    });
+
+    let viewrepo = document.getElementById("viewrepo");
+
+    viewrepo.addEventListener('click', () => {
+        window.open('https://github.com/SahilDevli/Medai','_blank');
+    });
+
+
+
+</script>
+</html>

@@ -1,0 +1,76 @@
+
+footer{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 30vh;
+    width: 99.9vw;
+
+    color: rgb(107, 107, 107);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+    cursor: default;
+
+    flex-wrap: wrap;
+}
+footer .foot1{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+footer .foot1 img{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}
+footer .quicklinks table{
+    /* border: 1px solid black; */
+    /* border-collapse: collapse; */
+    height: 10em;
+    width: 20em;
+    align-items: baseline;
+}
+footer .quicklinks table tr th{
+    text-align: start;
+    font-weight: bold;
+    color: rgb(54, 54, 54);
+}
+footer .quicklinks table tr td a{
+    text-decoration: none;
+    color: rgb(107, 107, 107);
+}
+footer .quicklinks table tr td a:hover{
+    text-decoration:underline;
+}
+
+footer .quicklinks table tr #feedback:hover{
+    text-decoration:underline;
+
+}
+
+@media (max-width: 865px){
+    footer{
+        height: 50vh;
+        width: 99.9vw;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 470px){
+    footer .foot1{
+        gap: 20px;
+        justify-content: space-evenly;
+        font-size: x-small;
+    }
+    footer .foot1 img{
+        height: 45px;
+        width: 45px;
+        border-radius: 100%;
+    }
+}
